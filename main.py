@@ -58,7 +58,7 @@ try:
             else:
                 print(output)
 
-            params = urllib.urlencode({'field1' : sensor.data.temoerature, 'field2' : sensor.data.pressure, 'field3' : sensor.data.humidity, 'key' : key})
+            params = urllib.urlencode({'field1' : sensor.data.temperature, 'field2' : sensor.data.pressure, 'field3' : sensor.data.humidity, 'key' : key})
             headers = {"Content-typZZe": "application/x-www-form-urlencoded","Accept": "text/plain"}
             conn = httplib.HTTPConnection("api.thingspeak.com:80")
 
@@ -71,7 +71,7 @@ try:
             except:
                 print "connection failed"
             break
-                
+
         time.sleep(10)
 
 except KeyboardInterrupt:
