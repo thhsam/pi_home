@@ -70,9 +70,8 @@ try:
                 conn.close()
             except:
                 print "connection failed"
-            break
 
-        time.sleep(10)
+        time.sleep(30)
 
 except KeyboardInterrupt:
     pass
